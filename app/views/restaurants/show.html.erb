@@ -1,10 +1,12 @@
-<p style="color: green"><%= notice %></p>
+<h1 class="display-6" style="text-align: center;"><%= @restaurant.name %></h1>
 
-<%= render @restaurant %>
 
-<div>
-  <%= link_to "Edit this restaurant", edit_restaurant_path(@restaurant) %> |
-  <%= link_to "Back to restaurants", restaurants_path %>
-
-  <%= button_to "Destroy this restaurant", @restaurant, method: :delete %>
+<div class="card">
+  <div class="card-header">
+    <%= @restaurant.name %>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%= @restaurant.category %></h5>
+    <p class="card-text"><%= @restaurant.address %></p>
+  </div>
 </div>

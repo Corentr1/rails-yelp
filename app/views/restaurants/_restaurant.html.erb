@@ -1,22 +1,6 @@
-<div id="<%= dom_id restaurant %>">
-  <p>
-    <strong>Name:</strong>
-    <%= restaurant.name %>
-  </p>
-
-  <p>
-    <strong>Address:</strong>
-    <%= restaurant.address %>
-  </p>
-
-  <p>
-    <strong>Phone number:</strong>
-    <%= restaurant.phone_number %>
-  </p>
-
-  <p>
-    <strong>Category:</strong>
-    <%= restaurant.category %>
-  </p>
-
-</div>
+<tr>
+  <td><%= link_to "#{restaurant.name}", restaurant_path(restaurant)%></td>
+  <td><%= restaurant.address %></td>
+  <td><%= restaurant.phone_number %></td>
+  <td><%= restaurant.category %></td>
+</tr>

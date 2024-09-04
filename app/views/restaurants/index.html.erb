@@ -1,16 +1,20 @@
 <p style="color: green"><%= notice %></p>
 
-<% content_for :title, "Restaurants" %>
+<h1 class="display-6" style="text-align: center;">Behold these mighty restaurants!</h1>
 
-<h1>Restaurants</h1>
-
-<div id="restaurants">
-  <% @restaurants.each do |restaurant| %>
-    <%= render restaurant %>
-    <p>
-      <%= link_to "Show this restaurant", restaurant %>
-    </p>
-  <% end %>
-</div>
-
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Address</th>
+      <th scope="col">Phone Number</th>
+      <th scope="col">category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @restaurants.each do |restaurant| %>
+      <%= render restaurant %>
+    <% end %>
+  <tbody>
+</table>
 <%= link_to "New restaurant", new_restaurant_path %>
